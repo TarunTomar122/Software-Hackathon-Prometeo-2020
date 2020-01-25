@@ -5,17 +5,17 @@ HomePageView
 
 ![Home](https://github.com/TarunTomar122/Software-Hackathon-Prometeo-2020/blob/master/ui/dashboard.PNG)
 
-# Requirements
-1.Django - To install django type 'pip install django' in cmd.
-2.Crispy_Forms - To install Crispy_Forms type 'pip install crispy_forms' in cmd.
-3.Django-allAuth - To install allAuth type 'pip install django-allauth' in cmd.
+# Requirements                                                   
+1.Django - To install django type 'pip install django' in cmd.                             
+2.Crispy_Forms - To install Crispy_Forms type 'pip install crispy_forms' in cmd.                       
+3.Django-allAuth - To install allAuth type 'pip install django-allauth' in cmd.                                        
 
-To run the server follow the given steps below: 
-1. Open CMD in the forked local directory where manage.py file is located.
-2. Type 'python manage.py makemigrations' and hit enter to create track of migrations.
-3. Type 'python manage.py migrate' and hit enter to migrate the tracked files.
-4. Type 'python manage.py runserver' and hit enter to run the server.
-5. While the server is running, navigate to your favourite browser and navigate to 'localhost:9001' to view the webapp.
+To run the server follow the given steps below:                                 
+1. Open CMD in the forked local directory where manage.py file is located.                             
+2. Type 'python manage.py makemigrations' and hit enter to create track of migrations.                        
+3. Type 'python manage.py migrate' and hit enter to migrate the tracked files.                    
+4. Type 'python manage.py runserver' and hit enter to run the server.                        
+5. While the server is running, navigate to your favourite browser and navigate to 'localhost:8000' to view the webapp.                          
 
 If you want to make a new admin id just hit following command - 
 'python manage.py createsuperuser'

@@ -1,0 +1,25 @@
+{% extends "base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+<div class="content-section container" style="font-family: 'Caveat', cursive;">
+    {% if request.user.verified %}
+    <form method="POST" enctype="multipart/form-data" class=".custom-file-input">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Blog Post</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Post</button>
+        </div>
+    </form>
+    {% else %}
+        <p class="text-danger" style="font-size: 40px;font-family:font-family: 'Caveat', cursive;">You are Not Verified Still. In the mean time update you Profile, if not done already, and wait for verification by admin. Cheers!</p>
+    {% endif %}
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="font-family: 'Indie Flower', cursive;">
+    <img src="{% static '/Images/div__.jpg'%}" alt="lorem ipsum" class="img-fluid" style="height: 300px;display:block;margin: auto auto;margin-top: 100px;">
+    <div class="links">
+        <div class="rounded-box d-flex">
+            {%if not request.user.is_authenticated%}
+            <a href="{% url 'account_signup' %}" style="color: black;background-color: rgb(255, 255, 255);font-size: 20px;" class="rounded-lg p-1 font-weight-normal">Register as a counsellor</a>
+            {% endif %}
+        </div>
+        <a href="{% url 'show_articles' %}" class="rounded-lg" style="display: flex;justify-content: center;margin-top: 12px;">
+            <div class="rounded -lg border border-white p-2" style="color:white ;">
+                Featured Articles
+            </div>
+        </a>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<div class="container">
+    <h1 class="border-dark" style="text-align: center;color: black;">Featured Content</h1>
+    <hr>
+    <div class="content">
+        <div class="rowstyle mt-4">
+            <div class="row">
+                <div class="col">
+                    <div class="heading">Scientists build first-person view video database to provide visual data in line with human experience</div>
+                    <br>
+                    <p>To better understand the organization of the brain and the perceptual tendencies in humans, a team of four scientists are recording video from four head-mounted cameras - with eyetracking and head movement - and assembling a massive video database with more than 240 hours of first-person video that can be used by researchers everywhere</p>
+                </div>
+                <div class="col"><img src="{%static '/Images/img1.jpg' %}" alt="" class="rounded"></div>
+            </div>
+            <div class="rowstyle mt-4" style="margin-left: -170px;">
+                <div class="row">
+                    <div class="col">
+                        <div class="heading">Early life exposure to traffic-related air pollution may cause structural brain changes at age 12</div>
+                        <br>
+                        <p>A new study suggests that significant early childhood exposure to traffic-related air pollution (TRAP) is associated with structural changes in the brain at the age of 12.
+                            The Cincinnati Children's Hospital Medical Center study found that children with higher levels of TRAP exposure at birth had reductions at age 12 in gray matter volume and cortical thickness as compared to children with lower levels of exposure.</p>
+                    </div>
+                    <div class="col"><img src="{% static '/Images/sdsd.jfif' %}" alt="" class="rounded"></div>
+                    <div class="rowstyle mt-4" style="margin-left: -170px;">
+                        <div class="row">
+                            <div class="col">
+                                <div class="heading">
+                                    Addiction and Dopamine</div>
+                                <br>
+                                <p>Addiction is where someone has little or zero control over doing, taking or using something to a potentially harmful point. The most common addictions are that of drugs, alcohol, and nicotine.</p>
+                            </div>
+                            <div class="col"><img src="{% static '/Images/sdd.jfif' %}" alt="" class="rounded"></div>
+                            <div class="rowstyle mt-4" style="margin-left: -170px;">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="heading">
+                                            Drug Abuse and Depression</div>
+                                        <br>
+                                        <p>When a person is depressed, it can be tempting to relieve depressive symptoms by turning to drugs and/or alcohol. An estimated one-third of people with clinical depression engage in substance abuse as a form of self-medication to relieve feelings of hopelessness, low-self-opinion, and despair.</p>
+                                    </div>
+                                    <div class="col"><img src="{%static '/Images/ss.jfif'%}" alt="" class="rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

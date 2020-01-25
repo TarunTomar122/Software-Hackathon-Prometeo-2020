@@ -1,0 +1,32 @@
+{% extends "base2.html" %}
+{%block content%}
+<br>
+<div class="container" style="font-family: 'Indie Flower', cursive;">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+                <h1>{{post.title}}</h1>
+                <span class="meta">Posted by
+                    {{post.author}}
+                    On {{post.date}}</span>
+                <img src="{{ post.image.url }}" style="height:350px;width:700px" class="rounded">
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<!-- Post Content -->
+<article class="mt-4" style="font-family: 'Indie Flower', cursive;" >
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {{post.body|safe|linebreaks}}
+        </div>
+    </div>
+</article>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

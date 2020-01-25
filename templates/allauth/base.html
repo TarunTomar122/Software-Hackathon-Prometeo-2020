@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>FitPal</title>
+</head>
+
+
+<body data-spy="scroll" data-target=".main-navigation" data-offset="150">
+  <div class="container">
+    {% block body %}
+
+    {% if messages %}
+    <div>
+      <strong><font style="color: white">Messages:</font></strong>
+      <ul>
+        {% for message in messages %}
+        <li><font style="color: white">{{message}}</font></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+  
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </div>
+  </body>  
+</html>

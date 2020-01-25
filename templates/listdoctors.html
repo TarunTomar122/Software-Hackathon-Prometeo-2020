@@ -1,0 +1,52 @@
+{% extends "base2.html" %}
+{%load static%}
+{% block content %}
+<div class="container mt-5" style="font-family: 'Indie Flower', cursive;">
+    <div class="container">
+        <hr style="border-width:20px">
+        {% for p in doctors %}
+        {% if p.verified %}
+        <div class="row">
+            <div class="col-sm-4 ml-5">
+                <img src="{{p.image.url}}" style="width:180px;height:200px" class="rounded">
+            </div>
+            <div class="col-sm-7">
+                <div class="col-sm-8">
+                    <h2 class="post-title">
+                        {{p.first_name}} {{p.last_name}}
+                    </h2>
+                    <p class="post-title text-danger">
+                        {{p.degree}}
+                    </p>
+                    <p class="post-title text-info">
+                        {{p.about}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr style="border-width:20px">
+        {% endif %}
+        {%endfor%}
+        {% if is_paginated %}
+        {% if page_obj.has_previous %}
+        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+        {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+        <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+            {% endif %}
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

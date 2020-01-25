@@ -1,0 +1,32 @@
+{% extends "base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+<div class="container" style="font-family: 'Indie Flower', cursive;">
+<div class="row">
+    <div class="col-sm-4 ml-3">
+        <img src="{{form.image.value.url}}" style="width:200px;height:150px">
+    </div>
+    <div class="col-sm-6">
+        <h4 class="text-danger">Username - {{form.username.value}}</h4>
+        <h4 class="text-danger">Name - {{form.first_name.value}} {{form.second_name.value}}</h4>
+        <p class="text-info">{{form.degree.value}}</p>
+    </div>
+</div>
+<hr>
+<form method="POST" enctype="multipart/form-data" class=".custom-file-input">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Profile Info</legend>
+        {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-outline-info btn2" type="submit">Update</button>
+    </div>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

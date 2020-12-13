@@ -58,3 +58,6 @@ Then provide the asked information and you are all set up!
 [![](https://img.shields.io/badge/Donate-Jupyter?style=for-the-badge)](https://razorpay.webug.space/TarunTomar122/Software-Hackathon-Prometeo-2020)
 [# Supporters]
   <img src="https://avatars2.githubusercontent.com/u/54112921?v=4" width="60" height="60"/>
+<a href="https://razorpay.webug.space/TarunTomar122/Software-Hackathon-Prometeo-2020"><img src="https://i.imgur.com/ihTLDXK.jpeg" width="200"/></a>
+
+# Supporters
